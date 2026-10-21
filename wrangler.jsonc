@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mindora",
+  "main": "./src/worker.ts",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "MINDORA_DB",
+      "database_name": "mindora-db",
+      "database_id": "41fc338f-280c-4758-8899-8d7089aa17ee"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "MINDORA_ASSETS",
+      "id": "e7f7bed14fca49a1b0686d3244c2996f"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

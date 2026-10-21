@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Builds
+dist/
+dist-ssr/
+build/
+.vite/
+.wrangler/
+.dev.vars
+
+# Tests
+test-results/
+playwright-report/
+blob-report/
+coverage/
+
+# Logs
+*.log
+pnpm-debug.log*
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.local
+.tmp/
+artifacts/
