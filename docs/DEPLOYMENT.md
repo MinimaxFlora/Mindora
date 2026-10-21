@@ -161,7 +161,17 @@ Access 适合：
 
 ## 6. 自定义域名
 
-Dashboard → Workers & Pages → `mindora` → Settings → Domains & Routes。
+当前生产域名：**https://mindora.kejizero.xyz**
+
+`wrangler.jsonc` 已声明：
+
+```jsonc
+"routes": [
+  { "pattern": "mindora.kejizero.xyz", "custom_domain": true }
+]
+```
+
+`wrangler deploy` 会在 `kejizero.xyz` 区域中创建对应 DNS 记录并申请证书。也可以在 Dashboard → Workers & Pages → `mindora` → Settings → Domains & Routes 中手动绑定。
 
 生产必须使用 HTTPS，否则会话 Cookie 不会带 `Secure`（本地开发除外）。
 
@@ -170,7 +180,7 @@ Dashboard → Workers & Pages → `mindora` → Settings → Domains & Routes。
 仓库包含：
 
 - `.github/workflows/ci.yml`：类型、Lint、单元测试、构建、Playwright。
-- `.github/workflows/deploy.yml`：手动触发，先跑检查、应用远程迁移、再部署。默认不随 push 自动部署；配置 Secrets 后可恢复 `push` 触发。
+- `.github/workflows/deploy.yml`：`main` push 或手动触发，先跑检查、应用远程迁移、再部署；需要的 Secrets 已配置。
 
 GitHub → Settings → Secrets and variables → Actions：
 

@@ -8,7 +8,7 @@
 
 > 当前版本：`0.1.0`。这是一个真实可用的单用户云端笔记 MVP：有账户注册/登录、D1 持久化、会话 Cookie、图片上传、跨设备同步和端到端测试。
 >
-> 在线部署：<https://mindora.zj18139624826.workers.dev>
+> 在线部署：<https://mindora.kejizero.xyz>
 
 ---
 
