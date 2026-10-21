@@ -170,7 +170,7 @@ Dashboard → Workers & Pages → `mindora` → Settings → Domains & Routes。
 仓库包含：
 
 - `.github/workflows/ci.yml`：类型、Lint、单元测试、构建、Playwright。
-- `.github/workflows/deploy.yml`：`main` 或手动触发，先跑检查、应用远程迁移、再部署。
+- `.github/workflows/deploy.yml`：手动触发，先跑检查、应用远程迁移、再部署。默认不随 push 自动部署；配置 Secrets 后可恢复 `push` 触发。
 
 GitHub → Settings → Secrets and variables → Actions：
 
